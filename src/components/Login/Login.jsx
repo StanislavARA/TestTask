@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { connect } from "react-redux";
 import { setUserData } from "../Store/login-reducer";
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink } from "react-router-dom";
 import s from "./Login.module.css";
 
 const Login = (props) => {
@@ -36,13 +36,15 @@ const Login = (props) => {
             />
           </div>
 
-          <NavLink to="/" className={s.link} onClick={setData}>
+          {/* <NavLink to="/" className={s.link} onClick={setData}>
             Sign In
-          </NavLink>
+          </NavLink> */}
+          <button onClick={setData}> Sign in</button>
         </div>
       </div>
     );
   }
+  return <Navigate to={"/"} />;
 };
 
 const mapStateToProps = (state) => {

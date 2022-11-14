@@ -29,7 +29,6 @@ const MapPage = (props) => {
         amount={el.amount}
         x={el.x}
         y={el.y}
-        key={index}
         points={props.mapPage.elements}
         removePoint={props.removePoint}
       />
