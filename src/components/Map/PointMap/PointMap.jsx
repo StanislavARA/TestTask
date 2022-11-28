@@ -12,7 +12,7 @@ const PointMap = (props) => {
   };
   const removeCurrentPoint = () => {
     let newPoints = props.points.filter((item) => {
-      return item.name != props.name;
+      return item.name !== props.name;
     });
 
     props.removePoint(newPoints);

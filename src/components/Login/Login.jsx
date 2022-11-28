@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { connect } from "react-redux";
 import { setUserData } from "../Store/login-reducer";
-import { Navigate, NavLink } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import s from "./Login.module.css";
 
 const Login = (props) => {
@@ -35,10 +35,6 @@ const Login = (props) => {
               onChange={changeInputPassword}
             />
           </div>
-
-          {/* <NavLink to="/" className={s.link} onClick={setData}>
-            Sign In
-          </NavLink> */}
           <button onClick={setData}> Sign in</button>
         </div>
       </div>
